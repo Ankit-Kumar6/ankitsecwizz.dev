@@ -60,9 +60,28 @@
                 I'm 19 years old.<br><br> A CS student at <span class="green-detail">KIIT</span>. Interested in Cybersecurity and Computers.<br>
                 <br> I write blog contents that are focused on CTF challenges and my projects in the field of cybersecurity.
             </p>
-            <button onclick="window.location.href = '/html/eegg.html';" style="border-radius: 15px; background-color: rgb(66, 141, 247); color: rgb(255, 255, 255);">Easter Egg</button>
+            <button onclick="showGeolocation();" style="border-radius: 15px; background-color: rgb(66, 141, 247); color: rgb(255, 255, 255);">Easter Egg</button>
         </div>
     </div>
+    
+    <pre id="geolocation-result"></pre>
+    
+    <script>
+        function showGeolocation() {
+            var resultContainer = document.getElementById('geolocation-result');
+    
+            fetch('https://geolocation-db.com/json/')
+                .then(response => response.json())
+                .then(data => {
+                    alert(JSON.stringify(data, null, 2)); // Display the JSON data in the alert
+                    resultContainer.textContent = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    resultContainer.textContent = 'Failed to retrieve geolocation data.';
+                });
+        }
+    </script>
 
     <div id="blog">
         <div class="center fade-in">
