@@ -1,0 +1,33 @@
+/* About Styles */
+#about {
+  background: #111;
+  size: flex;
+  color: #ffffff;
+  padding: 40px 20px;
+  margin-top: -20vh; /* Adjust the margin-top value to position it higher */
+}
+
+  #about-header {
+    font-size: 4vh;
+    margin: 10px;
+    text-align: center;
+    line-height: 1.5; /* Adjust the line-height value to increase or decrease the spacing */
+    font-family: 'Julius Sans One', sans-serif;
+  }
+  
+  #about-text {
+    font-size: 2vh;
+    text-align: center;
+    line-height: 1; /* Adjust the line-height value to increase or decrease the spacing */
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  header {
+    background-color: transparent;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }

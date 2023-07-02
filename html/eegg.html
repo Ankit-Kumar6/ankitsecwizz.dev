@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Geolocation Results</title>
+  <script>
+    function showGeolocation() {
+      var resultContainer = document.getElementById('geolocation-result');
+      
+      fetch('https://geolocation-db.com/json/')
+        .then(response => response.json())
+        .then(data => {
+          resultContainer.textContent = JSON.stringify(data, null, 2);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          resultContainer.textContent = 'Failed to retrieve geolocation data.';
+        });
+    }
+    
+    window.onload = showGeolocation;
+  </script>
+</head>
+<body>
+  <h1>Suprise!</h1>
+  <pre id="geolocation-result"></pre>
+</body>
+</html>

@@ -1,0 +1,35 @@
+/* Home Styles */
+#home {
+    background: #111;
+    color: #d2dae2;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20vh;
+    padding: 40px 20px;
+  }
+  
+  #main-header {
+    font-size: 4vh;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+  }
+  
+  #sub-header {
+    font-size: 2vh;
+    margin: 10px;
+    text-align: center;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  header {
+    background-color: transparent;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }

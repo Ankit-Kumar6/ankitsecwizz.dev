@@ -1,0 +1,85 @@
+/* Contact Styles */
+#contact {
+    background: #111;
+    color: #c5c8ca;
+    padding: 40px 20px;
+    margin-top: -20vh;
+  }
+  
+  #contact-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 0 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+  }
+  
+
+  
+  #contact-header {
+    font-size: 4vh;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .contact-form-text {
+    margin: 16px 0;
+    padding: 20px 40px;
+    border-radius: 5px;
+    font-size: 2vh;
+    background-color: #525151ac;
+    color: #c1c1c1;
+    width: 100%; /* Adjust the width as needed */
+    box-sizing: border-box;
+    opacity: 0.8;
+  }
+  
+  
+  .contact-form-btn {
+    background-color: #007096;
+    color: #e3e0e0;
+    border: 0;
+    border-radius: 15px;
+    padding: 12px 50px;
+    font-size: 2vh;
+    cursor: pointer;
+    width: 120px;
+    float: right; /* Align the button to the right */
+    transition: 0.5s;
+    text-align: center; /* Adjust the text alignment to center */
+    margin-left: auto; /* Add margin-left: auto; to push the button to the right */
+  }
+  
+  
+  
+  .contact-form-btn:hover {
+    background-color: #02acc6;
+  }
+  .contact-form-message {
+    height: 150px; /* Adjust the height as needed */
+  }
+  
+
+  .hidden {
+    display: none;
+  }
+  
+  header {
+    background-color: transparent;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }

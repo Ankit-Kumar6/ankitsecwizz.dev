@@ -1,0 +1,284 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: transparent;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.blue-detail {
+  color: rgb(0, 183, 255);
+}
+
+.red-detail {
+  color: rgb(251, 79, 0);
+}
+
+.green-detail {
+  color: rgb(19, 223, 0);
+}
+
+/* Navigation Styles */
+nav {
+  background: #111;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+#nav-container {
+  display: flex;
+  justify-content: center;
+}
+
+.show-menu-btn, .hide-menu-btn {
+  cursor: pointer;
+  color: #d2dae2;
+  font-size: 24px;
+  padding: 10px;
+}
+
+.show-menu-btn {
+  display: none;
+}
+
+.hide-menu-btn {
+  display: none;
+}
+
+#nav-ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 10px;     /* header-edit*/
+}
+
+.nav-li {
+  margin-right: 10px;
+}
+
+.nav-link {
+  color: #d2dae2;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.selected {
+  background: #00bbff;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #111;
+  height: 45px; /* Adjust the height as needed */
+  color: rgb(0, 0, 0); /* Add appropriate text color */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+#sm-ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sm-logo {
+  display: inline-block; /* Remove any default spacing or alignment */
+  font-size: 24px; /* Adjust the icon size as needed */
+  margin-right: 15px; /* Adjust the spacing between icons */
+}
+
+.sm-li {
+  margin: 10px 20px !important; /* Adjust the spacing between items */
+  padding: 0 10px;
+}
+
+
+.sm-linkedin {
+  color: #0077B5; /* Set the color for LinkedIn */
+}
+
+.sm-twitter {
+  color: #1DA1F2; /* Set the color for Twitter */
+}
+
+.sm-medium {
+  color: #e6e6e6; /* Set the color for Medium */
+}
+.sm-github {
+  color: #6f6e6e; /* Set the color for GitHub */
+}
+
+.sm-discord {
+  color: #7289DA; /* Set the color for Discord */
+}
+
+
+
+/* Animation Style */
+/* Add animation styles for fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+
+.nav-link.active {
+  /* Add your glowing effect or any other styling for the active button */
+  /* For example: */
+  color: #00f7ff;
+  /* Add any other styles you want for the active button */
+}
+
+/* Blog Styles */
+body {
+  background: linear-gradient(45deg, #111, #111);
+  color: #d2dae2;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.blog-post {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.blog-post h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.blog-post p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.blog-post a {
+  color: #66b3ff;
+  text-decoration: none;
+}
+
+.blog-post a:hover {
+  text-decoration: underline;
+}
+
+.blog-post .date {
+  font-size: 14px;
+  color: #999;
+}
+
+.footer {
+  background-color: #333;
+  color: #d2dae2;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer a {
+  color: #66b3ff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.active {
+  transform: translateX(0%);
+}
+
+.inactive {
+  transform: translateX(100%);
+}
+
+#blog {
+  position: relative;
+}
+
+#blog-header {
+  margin-top: 80px; /* Adjust the margin as needed */
+}
+
+.blog-content {
+  max-height: calc(100vh - 160px); /* Adjust the height based on your requirements */
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+

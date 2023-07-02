@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SecWizz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Green Wizard aka Ankit Kumar">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Fixed header */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+        }
+        /* Prevent overlapping with the fixed header */
+        body {
+            padding-top: 60px; /* Adjust to match the height of the header */
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul id="nav-ul">
+            <li class="nav-li"><a class="nav-link active" href="#home" data-target="home">Home</a></li>
+            <li class="nav-li"><a class="nav-link" href="#about" data-target="about">About</a></li>
+            <li class="nav-li"><a class="nav-link" href="#blog" data-target="blog">Blogs</a></li>
+            <li class="nav-li"><a class="nav-link" href="#portfolio" data-target="portfolio">Portfolio</a></li>
+            <li class="nav-li"><a class="nav-link" href="#contact" data-target="contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="home">
+        <div class="center fade-in">
+            <h1 id="main-header">Welcome to My Website</h1>
+            <h2 id="sub-header">This is a website that I made to introduce myself, share my knowledge, achievements and my workings. </h2>
+            <h3 id="main-header">I'm Ankit Kumar</h3>
+            <h4 id="sub-header">A student and A <span class="blue-detail">Cyber</span><span class="red-detail">Security</span> Enthusiast!</h4>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="center fade-in">
+            <h2 id="about-header">About Me<span class="blue-detail">:</span></h2>
+            <p id="about-text">
+                I'm 19 years old.<br><br> A CS student at <span class="green-detail">KIIT</span>. Interested in Cybersecurity and Computers.<br>
+                <br> I write blog contents that are focused on CTF challenges and my projects in the field of cybersecurity.
+            </p>
+            <button onclick="window.location.href = 'eegg.html';" style="border-radius: 15px; background-color: rgb(66, 141, 247); color: rgb(255, 255, 255);">Easter Egg</button>
+        </div>
+    </div>
+
+    <div id="blog">
+        <div class="center fade-in">
+            <h2 id="blog-header">Blogs</h2>
+            <div class="blog-content">
+                <!-- Your blog content goes here -->
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio" class="center">
+        <div id="img-container">
+            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="df755690-110a-4e9e-8dc9-344dde3a04f3" data-share-badge-host="https://www.credly.com"></div>
+            <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            <a href="certs/Strengthening Your Blue Teaming Skills.pdf" target="_blank">
+                <div class="pdf-preview">
+                    <img src="images/Screenshot 2023-07-01 124727.png" alt="Preview Image">
+                </div>
+                <span class="blue-detail">Antisyphon Certificate</span>
+            </a>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div id="contact-container" class="center fade-in">
+            <h1 id="contact-header">Contact Me<span class="blue-detail">:</span></h1>
+            <form class="contact-form" action="https://formspree.io/f/mgejwdel" method="POST">
+                <input type="text" class="contact-form-text" name="name" placeholder="Name" required>
+                <input type="email" class="contact-form-text" name="mail" placeholder="E-mail" required>
+                <textarea class="contact-form-text" name="message" placeholder="Message" required></textarea>
+                <button type="submit" class="contact-form-btn" name="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <ul id="sm-ul">
+            <li class="sm-li">
+                <a class="sm-logo sm-discord" href="https://discord.gg/green_wizz" target="_blank">
+                    <i class="fab fa-discord"></i>
+                </a>
+                <a class="sm-logo sm-linkedin" href="https://www.linkedin.com/in/ankit-kumar-pradhan-582764272/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a class="sm-logo sm-twitter" href="https://twitter.com/gr33n_w1zard" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="sm-logo sm-medium" href="https://medium.com/@kagenyx" target="_blank">
+                    <i class="fab fa-medium"></i>
+                </a>
+                <a class="sm-logo sm-github" href="https://github.com/Ankit-Kumar6" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const homeLink = document.querySelector('.nav-link[href="#home"]');
+
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = this.getAttribute('href');
+                    const targetSection = document.querySelector(target);
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+
+                    // Remove 'active' class from all links
+                    navLinks.forEach(function(link) {
+                        link.classList.remove('active');
+                    });
+
+                    // Add 'active' class to the clicked link
+                    this.classList.add('active');
+                });
+
+                // Add 'active' class to the link corresponding to the current page
+                const currentLocation = window.location.href;
+                const pageId = currentLocation.substring(currentLocation.indexOf('#'));
+                if (link.getAttribute('href') === pageId) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Scroll to home section on page load/refresh
+            window.addEventListener('load', function() {
+                homeLink.click();
+            });
+        });
+    </script>
+
+</body>
+</html>
